@@ -1,12 +1,12 @@
 
+
 h1{
     text-align: center;
     color: cornflowerblue;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .container {
-    margin: 0 auto;
-    align-self: center;
+border-style: ridge 10px;
 }
 
 body {
@@ -14,7 +14,7 @@ body {
     font-size: 20px;
     font-family: sans-serif;
     color: white;
-    background-image: url('https://images4.alphacoders.com/823/thumb-1920-82368.jpg');
+    background-image: url('http://i.imgur.com/9uDHO.jpg');
     text-align: center;
 }
 .question{
@@ -22,6 +22,7 @@ body {
 }
 .answers {
   margin-bottom: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .answers label{
   display: block;
