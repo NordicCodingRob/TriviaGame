@@ -1,4 +1,10 @@
-
+h3 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
 
 h1{
     text-align: center;
@@ -42,3 +48,13 @@ body {
 #submit:hover{
     background-color: #38a;
 }
+ #clock span{
+     text-align: center;
+     font-size: 20px;
+     margin: 0 auto;
+     color: #ffffff;
+     padding: 10px;
+     width: 10px;
+     border-radius: 15px;
+     box-sizing: border-box;
+ }

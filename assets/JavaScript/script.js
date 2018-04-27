@@ -45,7 +45,8 @@
         numCorrect++;
 
         answerContainers[questionNumber].style.color = "lightgreen";
-      } else {
+      } 
+      else {
         answerContainers[questionNumber].style.color = "red";
       }
     });
@@ -101,9 +102,45 @@
 
   submitButton.addEventListener("click", showResults);
 
-  var timer = 20000;
-function reload()
-{
-	window.location = 'http://www.trivianation.com/10-tips-to-win-at-trivia/';
+
+function updateTimer(opening){
+  var time = opening - new Date();
+  return {
+    'seconds': Math.floor( (time/20000) % 60),
+    'total': time
+  }
 }
+
+function animateClock(span) {
+  span.className = "turn";
+  setTimeout(function(){
+    span.className = "";
+  },100);
+}
+
+  function startTimer(id, opening) {
+  var timerInterval= setInterval(function(){
+var clock = document.getElementById(clock);
+var timer = updateTimer(opening);
+
+clock.innerHTML = '<span>' + timer.seconds + '</span>'
+
+var spans = clock.getElementsByTagName("span");
+animateClock(spans[1]);
+if(timer.seconds == 20) animateClock(spans[1]);
+
+if(timer.total < 1) {
+  clearInterval(timerInterval);
+  clock.innerHTML= '<span>0</span><span>0</span>';
+}
+
+  }, 20000);
+}
+
+
+  window.onload = function() {
+  var opening = new Date(20000);
+  startTimer("clock", opening);
+}
+
 })();
