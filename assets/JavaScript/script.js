@@ -44,7 +44,7 @@
       if (userAnswer === currentQuestion.correctAnswer) {
         numCorrect++;
 
-        answerContainers[questionNumber].style.color = "crimson";
+        answerContainers[questionNumber].style.color = "lightgreen";
       } 
       else {
         answerContainers[questionNumber].style.color = "red";
@@ -106,8 +106,7 @@
 function updateTimer(opening){
   var time = opening - new Date();
   return {
-    'seconds': Math.floor( (time/20000)
-    'total': time
+    'seconds' : Math.floor((seconds/2000))
   }
 }
 
